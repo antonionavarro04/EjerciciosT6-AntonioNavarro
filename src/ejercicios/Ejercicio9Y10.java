@@ -32,8 +32,7 @@ public class Ejercicio9Y10 {
         String textoCodificado = "";
         textoOriginal = textoOriginal.toLowerCase();
         for (int pos = 0; pos < textoOriginal.length(); pos++) {
-            char caracterActual = textoOriginal.charAt(pos);
-            textoCodificado += codifica(conjunto1, conjunto2, caracterActual);
+            textoCodificado += codifica(conjunto1, conjunto2, textoOriginal.charAt(pos));
         } return textoCodificado;
     }
 
@@ -41,8 +40,7 @@ public class Ejercicio9Y10 {
         String textoCodificado = "";
         textoOriginal = textoOriginal.toLowerCase();
         for (int pos = 0; pos < textoOriginal.length(); pos++) {
-            char caracterActual = textoOriginal.charAt(pos);
-            textoCodificado += decodifica(conjunto1, conjunto2, caracterActual);
+            textoCodificado += decodifica(conjunto1, conjunto2, textoOriginal.charAt(pos));
         } return textoCodificado;
     }
 

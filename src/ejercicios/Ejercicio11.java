@@ -6,25 +6,14 @@ import java.util.Scanner;
 
 public class Ejercicio11 {
     public static String fraseLarga(String fraseOriginal) {
+        String array[] = fraseOriginal.split(" ");
         String fraseMasLarga = "";
-        String frase = "";
 
-        String nuevaFrase = fraseOriginal;
-
-        int index;
-
-        do {
-            index = nuevaFrase.indexOf(' ');
-            if (index >= 0) {
-                frase = nuevaFrase.substring(0, index);
-                
-                nuevaFrase = nuevaFrase.substring(index + 1, nuevaFrase.length());
-            } if (frase.length() > fraseMasLarga.length()) {
+        for (String frase : array) {
+            if (frase.length() > fraseMasLarga.length()) {
                 fraseMasLarga = frase;
             }
-        } while (index != -1);
-
-        return fraseMasLarga;
+        } return fraseMasLarga;
     }
 
     // ^ Definimos una instancia de la clase Scanner como private static final de nombre read y cambiamos su formato a US
@@ -37,6 +26,6 @@ public class Ejercicio11 {
         frase = read.nextLine();
 
         fraseMasLarga = fraseLarga(frase);
-        System.out.printf("La frase mas larga es: \"'%s'\", con una longitud de \"%s\"", fraseMasLarga, fraseMasLarga.length());
+        System.out.printf("La palabra mas larga es: \"'%s'\", con una longitud de \"%s\"", fraseMasLarga, fraseMasLarga.length());
     }
 }
