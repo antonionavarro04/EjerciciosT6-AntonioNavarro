@@ -1,4 +1,4 @@
-package ejercicios.ejercicio14;
+package ejercicios.ejercicio14y15.ejercicio14;
 
 import funciones.Mathematics;
 import funciones.PerArrays;
@@ -12,6 +12,7 @@ public class Game {
     public static boolean haGanado = false;
 
     public static void generateAnagram() {
+        anagramaGenerado = "";
         char charizedString[] = anagrama.toCharArray();
 
         while (charizedString.length != 0) {
