@@ -14,7 +14,7 @@ public class Ejercicio14 {
         System.out.println("Bienvenidos al Juego del Anagrama!!!");
         System.out.println("En este juego uno de ustedes dos tiene que introducir una palabra.");
         System.out.println("Acto seguido el jugador 2 deberá acertar la palabra teniendo");
-        System.out.println("como referencia un anagrama que se generará de forma procedural");
+        System.out.println("como referencia un anagrama que se generará de forma aleatoria.");
         System.out.print("Press 'Enter' to start Playing...");
         read.nextLine();
 

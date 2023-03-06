@@ -22,7 +22,7 @@ public class Ejercicio15 {
         System.out.print("Jugador 1, introduce una palabra: ");
         do {
             Game.anagrama = read.nextLine();
-        } while (Game.anagrama.isEmpty());
+        } while (Game.anagrama.isEmpty() || Game.anagrama.length() == 1);
 
         Game.firstGuess();
         do {

@@ -20,14 +20,15 @@ public class Game {
     }
 
     public static void generateAnagram() {
-        anagramaGenerado = "";
-        char charizedString[] = anagrama.toCharArray();
-
-        while (charizedString.length != 0) {
-            int rng = Mathematics.rng(charizedString.length - 1);
-            anagramaGenerado += charizedString[rng];
-            charizedString = PerArrays.deleteKnowingData(charizedString, rng);
-        }
+        do {
+            anagramaGenerado = "";
+            char charizedString[] = anagrama.toCharArray();
+            while (charizedString.length != 0) {
+                int rng = Mathematics.rng(charizedString.length - 1);
+                anagramaGenerado += charizedString[rng];
+                charizedString = PerArrays.deleteKnowingData(charizedString, rng);
+            }
+        } while (anagramaGenerado.equals(anagrama));
     }
 
     public static boolean comprobar() {
